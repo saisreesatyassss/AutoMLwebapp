@@ -62,3 +62,24 @@ Experience the AutoML Web App live [here](<https://automlwebapp1.streamlit.app/>
 
 ```bash
 git clone https://github.com/saisreesatyassss/AutoMLwebapp
+```
+2.  Install dependencies:
+ ```bash
+pip install -r requirements.txt
+```  
+3.  Run the app:
+ ```bash
+python app.py
+```  
+
+
+
+
+
+
+
+
+
+
+
+
