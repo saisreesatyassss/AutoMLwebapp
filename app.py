@@ -4,6 +4,7 @@ import streamlit as st
 
 
 #import profiling
+import streamlit_pandas_profiling
 from streamlit_pandas_profiling import st_profile_report
 from ydata_profiling import ProfileReport
 
