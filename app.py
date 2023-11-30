@@ -10,8 +10,7 @@ from ydata_profiling import ProfileReport
 
 
 #import for ml model
-from pycaret.classification import setup,pull
-from pycaret.classification import compare_models
+from pycaret.classification import setup,pull,save_model,compare_models 
 
 
 
@@ -84,39 +83,56 @@ if choice == "Ml":
     st.title("Machine Learning Model") 
     st.write("Please select the target variable - means which column you want to predict")   
     target = st.selectbox("Select Target Variable", df.columns)
+    if st.button("Run ML Model"):
+        
 
-    # Check and handle class imbalance here if needed
-    # class_counts = df[target].value_counts()
-    # rare_classes = class_counts[class_counts == 1].index.tolist()
 
-    # # Remove rare classes or aggregate them
-    # df[target] = df[target].apply(lambda x: "Other" if x in rare_classes else x)
-    # df[target] = pd.to_numeric(df[target], errors='coerce')
+        # Check and handle class imbalance here if needed
+        # class_counts = df[target].value_counts()
+        # rare_classes = class_counts[class_counts == 1].index.tolist()
 
-    st.write( df[target])
-    st.write( df.dtypes)
+        # # Remove rare classes or aggregate them
+        # df[target] = df[target].apply(lambda x: "Other" if x in rare_classes else x)
+        # df[target] = pd.to_numeric(df[target], errors='coerce')
 
-    # setup(data=df, target=target,verbose = False,fix_imbalance=True)
-    setup(data=df, target='Transported', session_id=123, log_experiment=True, experiment_name='your_experiment_name')
+        # st.write( df[target])
+        # st.write( df.dtypes)
 
-    setup_df = pull()
-    st.info("This is the setup data")
-    st.dataframe(setup_df)
+        # setup(data=df, target=target,verbose = False,fix_imbalance=True)
+        try:
+            setup(data=df, target=target,verbose = False,fix_imbalance=True)
 
-    # Handle class imbalance if needed after setup
-    # oversample or undersample or use other techniques
+            setup_df = pull()
 
-    best_model = compare_models()
-    compare_df = pull()
-    st.info("This is the ML model")
-    st.dataframe(compare_df)
-    st.write(compare_df)
+            if not setup_df.empty:
+                st.info("This is the setup data")
+                st.dataframe(setup_df)
 
-    best_model
+            # Handle class imbalance if needed after setup
+            # oversample or undersample or use other techniques
+            else:
+                st.warning("No data available in the setup. Please select the different column.")
+
+        except Exception as e:
+            st.warning("No data available in the setup. Please select the different column.")
+
+
+
+        with st.spinner("Please wait your model is building..."):
+            best_model = compare_models()
+            compare_df = pull()
+            st.info("This is the ML model")
+            st.dataframe(compare_df) 
+
+            best_model
+            save_model(best_model, 'best_model')
+            st.success("Model is built successfully. Please download the best model for further use.")
 
     
 
 if choice == "Download Model":
     st.write("Download Model")
+    with open("best_model.pkl", "rb") as f:
+        st.download_button("Download Model", f, file_name="best_trained_model.pkl ")
 
  
