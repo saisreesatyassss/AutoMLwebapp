@@ -53,7 +53,7 @@ if choice == "Profiling":
     st.write("Profiling")
 
     # Display loading spinner
-    with st.spinner("Profiling in progress..."):
+    with st.spinner("Please wait while we are profiling your data..."):
         # Generate Pandas Profiling report
         profile_report = ProfileReport(df, title="Pandas Profiling Report", explorative=True)
 

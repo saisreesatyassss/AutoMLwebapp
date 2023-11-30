@@ -36357,3 +36357,23 @@ Please also refer to the documentation for alternative solver options:
                                     warm_start=False))],
          verbose=False)
 2023-11-30 19:53:46,703:INFO:save_model() successfully completed......................................
+2023-11-30 21:25:25,953:INFO:  Stopping...
+2023-11-30 21:25:25,980:INFO:  Stopping...
+2023-11-30 21:25:26,203:INFO:  Stopping...
+2023-11-30 21:25:26,206:WARNING:Exception ignored in atexit callback: <function shutdown at 0x000002B5C41D8F40>
+2023-11-30 21:25:26,206:WARNING:Traceback (most recent call last):
+2023-11-30 21:25:26,206:WARNING:  File "C:\Users\SATHYA\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 2193, in shutdown
+2023-11-30 21:25:26,291:WARNING:    h.close()
+2023-11-30 21:25:26,291:WARNING:  File "C:\Users\SATHYA\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1197, in close
+2023-11-30 21:25:26,292:WARNING:    stream.close()
+2023-11-30 21:25:26,292:WARNING:  File "C:\Users\SATHYA\AppData\Local\Programs\Python\Python311\Lib\site-packages\streamlit\web\bootstrap.py", line 69, in signal_handler
+2023-11-30 21:25:26,324:WARNING:    server.stop()
+2023-11-30 21:25:26,325:WARNING:  File "C:\Users\SATHYA\AppData\Local\Programs\Python\Python311\Lib\site-packages\streamlit\web\server\server.py", line 397, in stop
+2023-11-30 21:25:26,340:WARNING:    self._runtime.stop()
+2023-11-30 21:25:26,341:WARNING:  File "C:\Users\SATHYA\AppData\Local\Programs\Python\Python311\Lib\site-packages\streamlit\runtime\runtime.py", line 308, in stop
+2023-11-30 21:25:26,358:WARNING:    async_objs.eventloop.call_soon_threadsafe(stop_on_eventloop)
+2023-11-30 21:25:26,359:WARNING:  File "C:\Users\SATHYA\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 806, in call_soon_threadsafe
+2023-11-30 21:25:26,379:WARNING:    self._check_closed()
+2023-11-30 21:25:26,380:WARNING:  File "C:\Users\SATHYA\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 519, in _check_closed
+2023-11-30 21:25:26,381:WARNING:    raise RuntimeError('Event loop is closed')
+2023-11-30 21:25:26,381:WARNING:RuntimeError: Event loop is closed
