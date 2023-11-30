@@ -8,17 +8,21 @@ AutoML Web App is a user-friendly application designed to streamline data analys
 
 ### 1. Upload Data
 - Easily upload CSV files for analysis.
+![image](https://github.com/saisreesatyassss/AutoMLwebapp/assets/132558766/9fee61ea-4b43-42fa-b1ad-a10cc9022ea7)
 
 ### 2. Automated Profiling
 - Utilizes `streamlit_pandas_profiling` to generate Pandas Profiling reports for quick data exploration.
+![image](https://github.com/saisreesatyassss/AutoMLwebapp/assets/132558766/a929efcf-e035-43b2-aae8-9a2a6c01ea57)
 
 ### 3. Machine Learning Models
 - Leverages PyCaret for effortless setup, model building, and comparison.
 - Handles class imbalances, ensuring robust model performance.
+![image](https://github.com/saisreesatyassss/AutoMLwebapp/assets/132558766/5f043072-5b99-436f-a6e6-9ba292a0778a)
 
 ### 4. Model Download
 - Save your best-trained model for future predictions.
 - Download the model in the `.pkl` format for seamless integration.
+![image](https://github.com/saisreesatyassss/AutoMLwebapp/assets/132558766/db4784de-32a1-47bb-a1db-46aa16e41bc6)
 
 ## Under the Hood
 
