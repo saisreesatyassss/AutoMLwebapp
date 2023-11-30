@@ -36,7 +36,7 @@ AutoML Web App is a user-friendly application designed to streamline data analys
 - Implements strategies to handle class imbalances for more accurate predictions.
 
 ### Deployment
-- Suitable for deployment on platforms like Streamlit Sharing or Heroku.
+- Suitable for deployment on platforms like Streamlit Sharing.
 - The app provides an accessible interface for users to experience data analysis and modeling.
 
 ## Code Structure
@@ -57,4 +57,4 @@ Experience the AutoML Web App live [here](<https://automlwebapp1.streamlit.app/>
 1. Clone the repository:
 
 ```bash
-git clone <Your GitHub Repository Link>
+git clone <https://github.com/saisreesatyassss/AutoMLwebapp>
