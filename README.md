@@ -61,4 +61,4 @@ Experience the AutoML Web App live [here](<https://automlwebapp1.streamlit.app/>
 1. Clone the repository:
 
 ```bash
-git clone <https://github.com/saisreesatyassss/AutoMLwebapp>
+git clone https://github.com/saisreesatyassss/AutoMLwebapp
