@@ -4,6 +4,7 @@
 
 AutoML Web App is a user-friendly application designed to streamline data analysis and machine learning workflows. Whether you're a data enthusiast or a seasoned data scientist, this app simplifies the process of uploading, profiling, and modeling, providing valuable insights with just a few clicks.
 
+Live:-https://automlwebapp1.streamlit.app/
 ## Features
 
 ### 1. Upload Data
